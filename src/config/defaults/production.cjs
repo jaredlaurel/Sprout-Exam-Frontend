@@ -3,7 +3,7 @@ const defaultConfig = require('./development.cjs');
 
 module.exports = _.merge(defaultConfig, {
   app: {
-    title: 'WAOS',
+    title: 'Employee Management',
     status: 'Prod',
   },
 });

@@ -2,13 +2,11 @@
 module.exports = {
   app: {
     title: 'Employee Management',
-    subtitle: 'welcome to demo.',
-    description: 'Vue - Boilerplate Front : Vuetify, Axios, Jest, Cypress (Alpha) ',
-    keywords: 'vue, vuetify, axios, jest, cypress',
-    author: 'pierre@weareopensource.me',
+    subtitle: 'Sprout Exam',
+    description: 'Sprout Exam - Front End',
     icon: 'fa-solid fa-earth-americas',
   },
-  port: 8080, // only available for dev env
+  port: 8080,
   api: {
     protocol: 'http',
     host: '127.0.0.1',
@@ -20,16 +18,16 @@ module.exports = {
     },
   },
   sign: {
-    route: '/employees', // route push after sign in/up
-    in: true, // display signin link
-    up: true, // display signup link
+    route: '/employees',
+    in: true,
+    up: true,
   },
   cookie: {
     prefix: 'waos',
   },
   oAuth: {
-    google: true, // require server side oAuth config
-    apple: true, // require server side oAuth config
+    google: true,
+    apple: true,
   },
   whitelists: {
     users: {
