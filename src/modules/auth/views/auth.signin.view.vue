@@ -105,7 +105,7 @@ export default {
   methods: {
     async validate() {
       const form = await this.$refs.form.validate();
-      if (this.email !== 'admin' && this.password !== 'password') {
+      if (this.email !== 'admin' || this.password !== 'password') {
         this.showInvalidCreds = true;
         return;
       }

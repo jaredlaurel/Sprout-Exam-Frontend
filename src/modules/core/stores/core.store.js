@@ -39,7 +39,6 @@ const actions = (app) => {
         ['meta.roles'],
         ['desc'],
       );
-      console.log('nav -->>', nav);
       commit('set_nav', nav);
     },
   };
