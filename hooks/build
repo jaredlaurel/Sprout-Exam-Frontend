@@ -1,0 +1,23 @@
+#!/bin/bash
+
+: "${IMAGE_NAME:=waosdocker}"
+
+: "${NODE_ENV:=development}"
+: "${WAOS_VUE_app_title:=WAOS-Docker}"
+: "${WAOS_VUE_api_protocol:=http}"
+: "${WAOS_VUE_api_host:=localhost}"
+: "${WAOS_VUE_api_port:=8000}"
+: "${WAOS_VUE_api_base:=api}"
+: "${WAOS_VUE_cookie:=waos}"
+
+ARGS=(
+ --build-arg NODE_ENV=$NODE_ENV
+ --build-arg WAOS_VUE_app_title=$WAOS_VUE_app_title
+ --build-arg WAOS_VUE_api_protocol=$WAOS_VUE_api_protocol
+ --build-arg WAOS_VUE_api_host=$WAOS_VUE_api_host
+ --build-arg WAOS_VUE_api_port=$WAOS_VUE_api_port
+ --build-arg WAOS_VUE_api_base=$WAOS_VUE_api_base
+ --build-arg WAOS_VUE_cookie=$WAOS_VUE_cookie
+)
+
+docker build ${ARGS[@]} -t $IMAGE_NAME .

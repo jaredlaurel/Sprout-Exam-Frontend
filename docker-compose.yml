@@ -1,0 +1,55 @@
+version: '3'
+
+services:
+
+  employeemanagementVue:
+    container_name: employeemanagementVue
+    image: employeemanagement/vue:latest
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - employeemanagementVue:/data
+    networks:
+      - frontend
+    # depends_on:
+    #   - employeemanagementNode
+    environment:
+      - "WAOS_VUE_api_host=waosnode"
+
+  # employeemanagementNode:
+  #   container_name: employeemanagementNode
+  #   image: employeemanagement/node:latest
+  #   restart: always
+  #   ports:
+  #     - 3000:3000
+  #   volumes:
+  #     - employeemanagementNode:/data
+  #   networks:
+  #     - frontend
+  #     - backend
+  #   # depends_on:
+  #   #   - mongo
+  #   environment:
+  #     - "WAOS_NODE_db_uri=mongodb://mongo:27017/WaosNodeDev"
+  #     - "WAOS_NODE_host=0.0.0.0"
+
+  # mongo:
+  #   container_name: mongo
+  #   image: mongo:latest
+  #   restart: always
+  #   volumes:
+  #     - mongo:/data
+  #   networks:
+  #     - backend
+      
+networks:
+    frontend:
+      driver: bridge
+    # backend:
+    #   driver: bridge
+
+volumes:
+  employeemanagementVue:
+  # employeemanagementNode:
+  # mongo:
