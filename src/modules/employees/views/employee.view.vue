@@ -206,6 +206,7 @@ export default {
           this.contractEndDate = data.contract_end_date;
           this.project = data.project;
           this.save = false;
+          this.changeType();
         })
         .catch((err) => console.log(err));
     }
