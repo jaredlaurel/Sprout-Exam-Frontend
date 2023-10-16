@@ -20,6 +20,9 @@ make logs
 Access:
 ```
 http://localhost:8080/
+
+username: admin
+password: password
 ```
 <br /> 
 
